@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GDDWNB</title>
+    <description>Everything about programming and life.
+</description>
+    <link>http://blog.sveri.de/</link>
+    <atom:link href="http://blog.sveri.de/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Jul 2016 14:51:29 +0200</pubDate>
+    <lastBuildDate>Fri, 08 Jul 2016 14:51:29 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>What if musicians had to use the same tools programmers use</title>
+        <description>&lt;p&gt;As most people do, I like listening to music and in the age of youtube it happens from time to time that listenting to music also means watching music. So someone suggested me to have a look at Niels Frahm, which I did and liked, especially in his live acts, so I came across a set from October 2014. Some time goes by and he is playing the piano and all of a sudden a guy joins him and they start a duett (If you’re interested, the piano part starts here: &lt;a href=&quot;https://youtu.be/YniiDC0J_7k?t=53m59s&quot; title=&quot;https://youtu.be/YniiDC0J_7k?t=53m59s&quot;&gt;https://youtu.be/YniiDC0J_7k?t=53m59s&lt;/a&gt;). After they are done he explains how that came.&lt;/p&gt;
+
+&lt;p&gt;In short he says he met the guy a day before on some kind of a party, heard him playing a piano and asked him to play one piece in D-Minor together the next evening, without practicing, just playing.&lt;/p&gt;
+
+&lt;p&gt;That was the moment I felt some sort of enlightment. I was asking myself, how would it be if two coders met and said, hey, I code tomorrow for some guy here, do you wanna join me for an hour. And he says yes, of course. Ah, we don’t need to practice, we just enjoy coding some time.&lt;/p&gt;
+
+&lt;p&gt;So the next day he comes over, takes his computer device next to him and sees him code, ah, yea, that looks good. What is the svn / git uri? Is that java?&lt;/p&gt;
+
+&lt;p&gt;Yea, it is, JDK5 indeed, we are coding for a legacy system running on some old device no one ever heard about. All you have to do is install that VM here, oh, its a VMware image, you cannot use Virtualbox for that and yea, you need access to the the companies source control. Wait, I just have to change the access rights here, ah, no, you need a login or what so ever.&lt;/p&gt;
+
+&lt;p&gt;Well, I guess you get the idea. One month later after everything is setup and running both guys code together a nice short algortihm which fixes some performance problems they had under special circumstances in like one hour.&lt;/p&gt;
+
+&lt;p&gt;Now, try to think of it the other way around. Imagine the musician would have to use a computer while he is on stage (Yea, I know modern DJs use software to produce sound, but that’s not the comparison I want to draw here). Imagine he would run a mix of gradle and ant on his „music device“ running on a windows system within a virtual machine and imagine he wants to start his show and then, whups, sorry, I have to reboot, updates are incoming.&lt;/p&gt;
+
+&lt;p&gt;One might say this is ridicoulus, this should not happen, this is made up, but wait. In germany there is a basketball team that may have to get into a league below because they „lost“ a game because the game started 25 minutes to late whereas the maximum delay allowed by the rules are 15 minutes. Guess where the 25 minutes came from? Windows update on a computer that they needed for the game, no joke, here is the link (german newspaper, sry) &lt;a href=&quot;http://www.zeit.de/sport/2015-03/basketball-paderborn-windows-update-abstieg&quot; title=&quot;http://www.zeit.de/sport/2015-03/basketball-paderborn-windows-update-abstieg&quot;&gt;http://www.zeit.de/sport/2015-03/basketball-paderborn-windows-update-abstieg.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, where were we? Right, the musician entertaining his crowd while he waits for his „music instrument“ to reboot. Maybe he tells some Microsoft jokes.&lt;/p&gt;
+
+&lt;p&gt;Then, when it is finally up he can start playing, great, but, in the middle of the set when he wants to „build“ his improvised tune some weird error occurs causing some missound and complaining about a „tune not found exception“. Well, it never occurred before he swears to his crowd, hectically trying to fix that damn exception or just playing a different tune. I guess you are getting the idea here too.&lt;/p&gt;
+
+&lt;p&gt;What do I want to say here? I learned a lot about programming languages in the last years, patterns, refactoring, functional programming, event sourcing, haskell type system, akka and the actor pattern and what not more.&lt;/p&gt;
+
+&lt;p&gt;The common thing about what I learned is that these are all principles related to the implementation work of a programmer.&lt;/p&gt;
+
+&lt;p&gt;Now, at work I may code like 2 – 5% of all my time I am there. This is not because I am lazy, but that I work on a part of a larger suite with probably 200 – 300 components and several teams working on them.&lt;/p&gt;
+
+&lt;p&gt;This obv. causes a very large code base with a very &lt;strong&gt;mixed&lt;/strong&gt; landscape with dozens of different tools used around the place.&lt;/p&gt;
+
+&lt;p&gt;So everything basically fails often, servers take time to restart. Build systems have to be upgraded. Reinstalling the whole suit happens maybe once a week, taking 2  to 3 hours.&lt;/p&gt;
+
+&lt;p&gt;So, when it comes to coding the business logic I am usually done in a short amount of time and then back to the whole ecosystem. Again you may get the idea.&lt;/p&gt;
+
+&lt;p&gt;So what am I doing at work. I fight the tools we have. I fight gradle, I fight ant, I fight OSGi, I fight the server our product runs on, I fight the mistakes other teams, we are depending on, make (don’t get me wrong, mistakes are part of a developers life, I make them too all the time), still, mistakes keep others from „working“.&lt;/p&gt;
+
+&lt;p&gt;Then I was thinking of the „Are we there yet?“ talk Rich Hickey gave: &lt;a href=&quot;http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey&quot; title=&quot;http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey&quot;&gt;http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey&lt;/a&gt;. And again it occured to me, well, everybodys talking about the languages. But, they are not my problem. My problem is the tooling.&lt;/p&gt;
+
+&lt;p&gt;And asking „are we there yet?“ regarding tooling I think we are as far away as the sun is from the earth. Sometimes things are so frustratingly complex, take so much time to debug, to make it work at all. Well, you get the idea again.&lt;/p&gt;
+
+&lt;p&gt;I don’t have a solution for this obviously and if I had I would sell it and get rich instead of writing a blog post. However, when reading about the „go“ language I always heard of it’s good tooling. Maybe I peek in there and see what it has to offer.&lt;/p&gt;
+
+&lt;p&gt;Aside from that I think there needs to be a radical change in how we work from day to day and from the whole universe of different tools we use as long as they are „broken“ and limited as they are (or maybe they are to complex and should be even more limiting?).&lt;/p&gt;
+
+&lt;p&gt;There is a need for something completely new, something different from what we have.&lt;/p&gt;
+
+&lt;p&gt;And if that happens, maybe that will be the „silver bullet“ everyone is looking for since the &lt;a href=&quot;http://en.wikipedia.org/wiki/Software_crisis&quot; title=&quot;Software Crisis&quot;&gt;http://en.wikipedia.org/wiki/Software_crisis&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And yes, I am aware that the tools we use are just software too, maybe that’s part of the problem. Maybe we should build software like hardware. What about a tool that is the complete equivalent to a guitar and how would you make sure that it is exactly that?&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Apr 2015 17:14:46 +0200</pubDate>
+        <link>http://blog.sveri.de/2015/04/29/what-if-musicians-had-to-use-the-same-tools-programmers-use/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2015/04/29/what-if-musicians-had-to-use-the-same-tools-programmers-use/</guid>
+        
+        <category>clojure</category>
+        
+        <category>musicians</category>
+        
+        <category>programming</category>
+        
+        <category>silver bullet</category>
+        
+        <category>tooling</category>
+        
+        
+        <category>Allgemein</category>
+        
+        <category>clojure</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Releasing closp 0.1.11 and closp-crud 0.1.0</title>
+        <description>&lt;p&gt;Today I release a new version of closp which includes closp-crud.&lt;/p&gt;
+
+&lt;p&gt;You can find the change list of closp at the bottom of the readme: &lt;a href=&quot;https://github.com/sveri/closp&quot; title=&quot;closp&quot;&gt;https://github.com/sveri/closp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also released closp-crud, which is a leiningen CRUD plugin generating SQL files, HTML templates and clojure database and routes code for the operations.&lt;/p&gt;
+
+&lt;p&gt;I provided some documentation on how to get running here: &lt;a href=&quot;https://github.com/sveri/closp-crud&quot; title=&quot;closp-crud&quot;&gt;https://github.com/sveri/closp-crud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also made a 12 minute introduction video on how to use that plugin and setting up closp before: &lt;a href=&quot;http://www.twitch.tv/sveri80/v/4298695&quot;&gt;http://www.twitch.tv/sveri80/v/4298695&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Disclaimer: The audio is not the best and I have some hiccups with an already running figwheel process that must have crashed somewhere. So, live debugging is included 😉&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Apr 2015 23:59:02 +0200</pubDate>
+        <link>http://blog.sveri.de/2015/04/23/releasing-closp-0-1-11-and-closp-crud-0-1-0/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2015/04/23/releasing-closp-0-1-11-and-closp-crud-0-1-0/</guid>
+        
+        <category>clojure</category>
+        
+        <category>closp</category>
+        
+        <category>closp-crud</category>
+        
+        <category>release</category>
+        
+        <category>web development</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+        <category>programming</category>
+        
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Releasing closp 0.1.5</title>
+        <description>&lt;p&gt;I released a new version of closp today: &lt;a href=&quot;https://github.com/sveri/closp&quot; title=&quot;https://github.com/sveri/closp&quot;&gt;https://github.com/sveri/closp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The most interesting change is that I am exposing a uuid instead of the database id in the admin users view.&lt;/p&gt;
+
+&lt;p&gt;Besides that this release only contains minor fixes.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Feb 2015 01:12:32 +0100</pubDate>
+        <link>http://blog.sveri.de/2015/02/26/releasing-closp-0-1-5/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2015/02/26/releasing-closp-0-1-5/</guid>
+        
+        <category>clojure</category>
+        
+        <category>closp</category>
+        
+        <category>database</category>
+        
+        <category>uuid</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Release CLOSP 0.1.4</title>
+        <description>&lt;p&gt;Last week I released CLOSP 0.1.4: https://github.com/sveri/closp&lt;/p&gt;
+
+&lt;p&gt;The only noteable change is the added support for recaptcha while signing up.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 Feb 2015 18:24:55 +0100</pubDate>
+        <link>http://blog.sveri.de/2015/02/22/release-closp-0-1-4/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2015/02/22/release-closp-0-1-4/</guid>
+        
+        <category>clojure</category>
+        
+        <category>recaptcha</category>
+        
+        <category>signup</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+      </item>
+    
+      <item>
+        <title>prismatic schema vs. core.typed</title>
+        <description>&lt;p&gt;The best explanation for this I have got was cflemings one on IRC:&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;color: #af7f00;&quot;&gt;(11:42:55) &lt;/span&gt;&lt;/span&gt;cfleming: sveri zilti: One major difference is that core.typed validates your code, schema validates your data. If you’re dealing with data exclusively created and manipulated by your code, core.typed is a good solution. If you’re validating data from an external source, you need schema.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: small;&quot;&gt;&lt;span style=&quot;color: #af7f00;&quot;&gt;(11:43:57) &lt;/span&gt;&lt;/span&gt;cfleming: sveri zilti: core.typed can validate that your functions only ever create data of a particular shape, but cannot validate that arbitrary data complies to that shape.&lt;/p&gt;
+
+&lt;p&gt;I just write it down here to have a place where I can look again in some months.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Jan 2015 13:46:26 +0100</pubDate>
+        <link>http://blog.sveri.de/2015/01/19/prismatic-schema-vs-core-typed/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2015/01/19/prismatic-schema-vs-core-typed/</guid>
+        
+        <category>clojure</category>
+        
+        <category>core.typed</category>
+        
+        <category>prismatic schema</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Using goog.string/format in clojurescript</title>
+        <description>&lt;p&gt;When I tried to format a string with googles closure library there was a surprising result. This code:&lt;/p&gt;
+
+&lt;p&gt;[codesyntax lang=“java“]&lt;/p&gt;
+
+&lt;pre&gt;(ns foo
+  (:require [goog.string :as gstring])))
+  
+(gstring/format &quot;%.2f MB&quot; 1000000)  
+&lt;/pre&gt;
+
+&lt;p&gt;[/codesyntax]&lt;/p&gt;
+
+&lt;p&gt;produces this error:&lt;/p&gt;
+
+&lt;p&gt;Uncaught TypeError: Cannot read property ‚call‘ of undefined&lt;/p&gt;
+
+&lt;p&gt;To resolve this issue just add this line to your require statement: [goog.string.format]. Whyever that is…&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Nov 2014 20:14:33 +0100</pubDate>
+        <link>http://blog.sveri.de/2014/11/24/using-goog-stringformat-in-clojurescript/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2014/11/24/using-goog-stringformat-in-clojurescript/</guid>
+        
+        <category>clojurescript</category>
+        
+        <category>format</category>
+        
+        <category>goog.string.format</category>
+        
+        <category>number</category>
+        
+        
+        <category>Computer-Mist</category>
+        
+        <category>programming</category>
+        
+      </item>
+    
+      <item>
+        <title>Providing a config file for juxt/jig</title>
+        <description>&lt;p&gt;Today I was trying out:  &lt;a href=&quot;https://github.com/juxt/jig&quot;&gt;https://github.com/juxt/jig&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;The configuration of jig says: &lt;a href=&quot;https://github.com/juxt/jig#configuration&quot;&gt;https://github.com/juxt/jig#configuration&lt;/a&gt; that you have to put a config.[edn&lt;/td&gt;
+      &lt;td&gt;clj] file into the „config“ folder. I was trying to create config folders with a configuration everywhere, but did not succeed. However, if you look into the source code of jig you will see that jig loads the configuration from io/resource, so I had to put it into the „resources“ folder of jig and instantly it worked.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Easy, isn’t it?&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 Jun 2014 13:56:25 +0200</pubDate>
+        <link>http://blog.sveri.de/2014/06/28/providing-a-config-file-for-juxtjig/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2014/06/28/providing-a-config-file-for-juxtjig/</guid>
+        
+        <category>clojure</category>
+        
+        <category>config</category>
+        
+        <category>jig</category>
+        
+        <category>resource</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+      </item>
+    
+      <item>
+        <title>Mini tutorial on clojure</title>
+        <description>&lt;p&gt;Today a friend of mine had the idea to parse some sensor data on a raspberry pi and generate a html file out of it. So, having had some time I wrote a small clojure application which does just that.&lt;/p&gt;
+
+&lt;p&gt;I did that in a tutorial form by adding functionality to that project in small steps and explaining what I did in the commits.&lt;/p&gt;
+
+&lt;p&gt;What the application does is the following:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Parse a config file for the path to a sensor file&lt;/li&gt;
+  &lt;li&gt;Open that sensor file and convert the data to a clojure map&lt;/li&gt;
+  &lt;li&gt;Take that clojure map and pass it to an enlive template&lt;/li&gt;
+  &lt;li&gt;The template generates a html with a li entry for each key value pair of the map&lt;/li&gt;
+  &lt;li&gt;Parse the config file for a path where we can store the generated html files&lt;/li&gt;
+  &lt;li&gt;Write the html to a randomly generated html file in that path&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The sensor file has to look like this:&lt;/p&gt;
+
+&lt;p&gt;key1: value1&lt;/p&gt;
+
+&lt;p&gt;key2: value2&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;It completely misses error handling and support for multiple files and a lot of different things one might think of, but I think you can get the point and an entry to step further with clojure.&lt;/p&gt;
+
+&lt;p&gt;You can find the code here: https://github.com/sveri/read-sensors&lt;/p&gt;
+
+&lt;p&gt;I am surprised that it only took me two hours. I had to ask once in the irc channel for the conversion of file data to maps but the rest of it could be done with my knowledge that I collected in the last 6 months and a bit of googling 🙂&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Jun 2014 01:01:19 +0200</pubDate>
+        <link>http://blog.sveri.de/2014/06/12/mini-tutorial-on-clojure/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2014/06/12/mini-tutorial-on-clojure/</guid>
+        
+        <category>clojure</category>
+        
+        <category>raspberry</category>
+        
+        <category>sensors</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+      </item>
+    
+      <item>
+        <title>The Five + One most underrated Features of Clojure</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;Syntax&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The clojure syntax is so easy that its possible to explain it inbetween a few minutes. Basically it boils down to:&lt;/p&gt;
+
+&lt;p&gt;Parathese open, function call and some arguments, then close the Parathenses. Like this: (+ 1 2 3 4 5).&lt;/p&gt;
+
+&lt;p&gt;Every expression returns a value and the function returns the value of the last expression evaluated.&lt;/p&gt;
+
+&lt;p&gt;Of course there are some special cases like reader macros and things. But to get started this can be enough.&lt;/p&gt;
+
+&lt;p&gt;The best thing about this is probably it’s consistency. You can rely on that scheme almost everywhere.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Maps&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;When I first got interested in clojure I was wondering why I never saw any objects, but I just moved it away and thought, hey, all the beginner tutorials just omit them. Then I went ahead and got a book about it, started to read and after almost 1/3 of the pages I started to wonder again, where are my damn objects. Give me some POJOs now, I need to store data (of course, in that time, in my mind). I opened the TOC of the book and see, nothing about POJOs.&lt;/p&gt;
+
+&lt;p&gt;Well, after thinking about it and looking more deeply, they were already there for a long time, but just not in the form that I got used to them.&lt;/p&gt;
+
+&lt;p&gt;POJOs are simply mapped by maps. And using maps in the clojure way is just fun and really, after giving it some time I am so relieved I don’t have to use POJOs anymore. Just put the data in the map and we are done:&lt;/p&gt;
+
+&lt;p&gt;(def person {:name „sveri“ :age 30}). Thats it, my person object. Especially the keyword (:name and :age) syntax combined with the pure data makes this so much more readable and reasonable that its just pure joy to work with it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;EDN&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Extensible Data Notation (https://github.com/edn-format/edn). Readers not knowing what this is about might imagine it like JSON on Crack. EDN is used buy clojure programs to transfer data. For instance it is possible to have webservices which send and return data in edn format. This is especially cool as you can use that data in your clojure code without having to reformat or parse it again.&lt;/p&gt;
+
+&lt;p&gt;A map in clojure can be returned as an edn response and be used the same way in clojurescript. The same is valid for datomic (which I will come to in 4.). I can update datomic datoms with data in edn format, just like this.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Datomic&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Well, I dont want to speak to much about as I have not much experience with it. But as far as I have used it it’s just awesome. I am writing this from a developers point of view. Using the datomic api is just nice and simple, if you grasp the points that datomic makes about it’s usage. There is a lot of documentation and screen casts available, and if I had a wish it would be nice if more of this tutorials directly target the clojure usage of datomic. However, again, being able to retrieve data from datomic and pass it to through my backend to my frontend clojurescript and still being able to use them as if it were clojure data structures is just awesome.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The clojure stack&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Of course one might reason about what this stack is. For me this currently are a few libraries evolving around clojure.&lt;/p&gt;
+
+&lt;p&gt;Namely I use:&lt;/p&gt;
+
+&lt;p&gt;Clojure (of course)&lt;/p&gt;
+
+&lt;p&gt;Clojurescript&lt;/p&gt;
+
+&lt;p&gt;om&lt;/p&gt;
+
+&lt;p&gt;core.async&lt;/p&gt;
+
+&lt;p&gt;Datomic&lt;/p&gt;
+
+&lt;p&gt;Leiningen&lt;/p&gt;
+
+&lt;p&gt;And a lot of other small libraries which I cannot mention because they are so easy to forget about as they just work.&lt;/p&gt;
+
+&lt;p&gt;Using all these libraries seemse like a fresh breeze, especially the easyness of integration into products. The fact that the documentation is almost always to the point and that the code is very readable makes programming just fun again.&lt;/p&gt;
+
+&lt;p&gt;Of course this all has to be taken as a very subjective post, however, reading about clojure I seldom find these topics mentioned, but I believe they are part of the great experience that one has working with this stack.&lt;/p&gt;
+
+&lt;p&gt;And again, just to repeat myself. As I found out how easy it is to send some web formular data over the wire into datomic with just a few lines of code I could have cried. Never in my life I was done so fast with a task that seems so hard and filled with boilerplate in different languages / frameworks (Just think about GWT and its DTOs and DAOs and factories and wrappers… Disclaimer, it’s been some time since I worked with GWT).&lt;/p&gt;
+
+&lt;p&gt;5 + 1.&lt;/p&gt;
+
+&lt;p&gt;I almost forgot about this one, just like most of the other entry points for clojure do.&lt;/p&gt;
+
+&lt;p&gt;Lighttable (http://www.lighttable.com/). Lighttable is an insane IDE, not by the editor features, but by the possibility to instantly see changes that you make to your code.&lt;/p&gt;
+
+&lt;p&gt;You can start a clojure repl inside an editor (your clojure file) and see the output that your functions and function calls generate, instantly.&lt;/p&gt;
+
+&lt;p&gt;That’s something I have never seen before and the first time I saw it I knew, ok, I never want to miss such a feature again. Of course, working daily with JAVA I feel the pain again and again, but, maybe thats subject to change some day.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know what a repl is just watch some videos about Lighttable and see the aweomeness for yourself.&lt;/p&gt;
+
+&lt;p&gt;Or, just download it and start using clojure today.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 14 May 2014 20:38:55 +0200</pubDate>
+        <link>http://blog.sveri.de/2014/05/14/the-five-one-most-underrated-features-of-clojure/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2014/05/14/the-five-one-most-underrated-features-of-clojure/</guid>
+        
+        <category>clojure</category>
+        
+        <category>clojurescript</category>
+        
+        <category>datomic</category>
+        
+        <category>edn</category>
+        
+        <category>features</category>
+        
+        <category>lighttable</category>
+        
+        <category>map</category>
+        
+        <category>syntax</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+        <category>programming</category>
+        
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Retrieve datoms in Datomic which are joined</title>
+        <description>&lt;p&gt;I just wondered how to retrieve a complete datom from datomic which references other attributes. With complete I mean a map which contains the whole dataset instead of rereferences to different datoms. I did not find a convenience method for it, so I wrote my own on.&lt;/p&gt;
+
+&lt;p&gt;This is the result:&lt;/p&gt;
+
+&lt;p&gt;[codesyntax]&lt;/p&gt;
+
+&lt;pre&gt;(defn get-by-id [dbconn id &amp;amp; [add-key]]
+  (let [entity (into {} (d/touch (d/entity dbconn (read-string id))))]
+    (if (and add-key (get entity add-key))
+      (assoc-in entity [add-key] (map #(d/touch (d/entity (dbc) (:db/id %))) (seq (add-key entity))))
+      entity)))&lt;/pre&gt;
+
+&lt;p&gt;[/codesyntax]&lt;/p&gt;
+
+&lt;p&gt;First we retrieve the original datom, convert this into a clojure map. Then we check if a third param is provided (the additional key that contains references to other datoms). If it exists, we retrieve the datoms for these id’s and put them in the original map afterwards.&lt;/p&gt;
+
+&lt;p&gt;This currently only works for a single ref, where the ref has a „many“ cardinality. But I guess its easy to generalize it some more to support different cases.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 May 2014 16:30:55 +0200</pubDate>
+        <link>http://blog.sveri.de/2014/05/05/retrieve-datoms-in-datomic-which-are-joined/</link>
+        <guid isPermaLink="true">http://blog.sveri.de/2014/05/05/retrieve-datoms-in-datomic-which-are-joined/</guid>
+        
+        <category>:db/id</category>
+        
+        <category>clojure</category>
+        
+        <category>datomic</category>
+        
+        <category>ref</category>
+        
+        <category>touch</category>
+        
+        
+        <category>clojure</category>
+        
+        <category>Computer-Mist</category>
+        
+      </item>
+    
+  </channel>
+</rss>
